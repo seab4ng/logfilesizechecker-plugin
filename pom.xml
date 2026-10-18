@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 The MIT License
-f
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -69,6 +69,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci</groupId>
+            <artifactId>annotation-indexer</artifactId>
+            <version>${jenkins-annotation-indexer.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-basic-steps</artifactId>
@@ -181,7 +187,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
     <build>
         <plugins>
-            <!-- Pin to version 1.8 so the legacy <tasks> configuration works -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
