@@ -187,10 +187,22 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
     <build>
         <plugins>
+            <!-- Ensure target/classes/META-INF/annotations exists to prevent NoSuchFileException during annotation processing -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>create-meta-inf-dir</id>
+                        <phase>initialize</phase>
+                        <configuration>
+                            <tasks>
+                                <mkdir dir="${project.build.directory}/classes/META-INF/annotations" />
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
             <plugin>
