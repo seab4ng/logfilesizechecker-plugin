@@ -48,7 +48,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
         <revision>1.6</revision>
         <changelist>-SNAPSHOT</changelist>
         <jenkins.version>1.642.3</jenkins.version>
-        <java.level>7</java.level>
+        <java.level>8</java.level>
 
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
         <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
